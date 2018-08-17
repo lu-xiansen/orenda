@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+/*--清除谷歌浏览器下的 search 叉号*/
+input::-webkit-search-cancel-button{
+    display: none;
+}
+/*--清除IE下的 search 叉号*/
+input[type=search]::-ms-clear{
+    display: none;
+}

@@ -1,0 +1,415 @@
+/**** global ****/
+body {
+    min-width: 1400px;
+    overflow-x: auto;
+}
+header {
+    position: relative;
+}
+
+#head {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 20px;
+}
+.safe {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.logo img {
+    height: 3rem;
+}
+
+/***** header begin *****/
+.swiper-container {
+    height: 500px;
+}
+.swiper-slide img {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.swiper-slide div {
+    position: absolute;
+    top: 300px;
+    left: 0;
+    right: 0;
+    color: #fff;
+}
+.swiper-wrapper h4 {
+
+}
+.swiper-pagination-bullet {
+    background: #fff;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #007aff
+}
+.logo,
+.lang{
+    display: inline-block;
+    color: #fff;
+}
+.lang {
+    float: right;
+
+}
+.lang>div{
+    height: 3rem;
+    line-height: 3rem;
+}
+.lang a{
+    color: #fff;
+}
+.lang .arrow {
+    position: relative;
+    display: inline-block;
+}
+.lang .arrow span{
+    width: 19px;
+    height: 12px;
+    display: inline-block;
+    background: url("../images/icon/down_arrow.png") no-repeat center;
+    background-size: 19px 12px;
+}
+.arrow:hover span{
+    background: url("../images/icon/up_arrow.png")
+}
+.arrow:hover .lan-list{
+    display: block;
+}
+.lang .lan-list {
+    position: absolute;
+    right: 0;
+    width: 123px;
+    line-height: 1.2rem;
+    background: #a7a7a7;
+    display: none;
+    z-index: 1;
+}
+
+.lang ul li {
+    padding: 2px 4px;
+}
+.lang ul li a{
+    display: block;
+}
+.lang ul li:hover a{
+    color: black;
+}
+.lang ul li:hover {
+    background: #fff;
+}
+
+nav {
+    position: absolute;
+    height: 3rem;
+    margin-top: 30px;
+    background: rgba(255,255,255,.8);
+}
+.nav-ul {
+    width: 70%;
+    display: inline-block;
+}
+.nav-ul:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.nav-ul>li{
+    float: left;
+    line-height: 3rem;
+    height: 3rem;
+    width: 16.6%;
+    text-align: center;
+    /*margin: 0 30px;*/
+}
+
+.nav-ul>li ul {
+    display: none;
+    background: rgba(0,0,0,.3);
+}
+.nav-ul>li:hover ul{
+    display: block;
+}
+.nav-ul li ul li {
+    line-height: 2rem;
+    text-align: left;
+    padding-left: 36px;
+}
+.nav-ul li ul li:last-child{
+    padding-bottom: 10px;
+}
+.nav-ul li ul li a {
+    font-size: .9rem;
+    color: #fff;
+    display: inline-block;
+}
+.nav-ul li ul li a:after{
+    content: '';
+    height: 1px;
+    width: 1rem;
+    display: block;
+    background: #fff;
+    -webkit-transition: width .5s;
+    -moz-transition: width .5s;
+    -o-transition: width .5s;
+    transition: width .5s;
+}
+.nav-ul li ul li a:hover:after {
+    width: 100%;
+}
+
+.nav-ul>li>a {
+    color: #000;
+}
+.nav-ul>li>a:hover {
+    color: #ff6b00;
+}
+
+.search {
+    position: relative;
+    float: right;
+    display: inline-block;
+    width: 30%;
+}
+.search-l {
+    position: absolute;
+    right: 3rem;
+    display: inline-block;
+    width: 0;
+    height: 3rem;
+    /*display: none;*/
+    overflow: hidden;
+    transition: all 1s;
+    background-color: #454545;
+}
+.search-l input {
+    float: left;
+    height: 3rem;
+    width: calc(100% - 3rem);
+    color: #fff;
+    background: #454545;
+    outline: none;
+    border: none;
+    list-style: none;
+    text-indent: 10px;
+}
+.search-l span {
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    background:  url("../images/icon/search_close.png") no-repeat center;
+    background-size: 1rem 1rem;
+    cursor: pointer;
+    transition:  1s;
+}
+
+.search-r {
+    float: right;
+    cursor: pointer;
+}
+.search-r:before {
+    display: inline-block;
+    /*height: 3rem;*/
+    width: 3rem;
+    text-align: center;
+    font: normal normal normal 1rem/3 FontAwesome;
+    content: '\f002';
+}
+/***** header end *****/
+
+
+
+/***** news begin *****/
+#news {
+    padding: 30px 0;
+}
+h2 {
+    color: #a7a7a7;
+    margin-bottom: 30px;
+}
+#news:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+#news ul {
+    position: relative;
+    width: calc(100% - 100px);
+    height: auto;
+}
+
+#news ul li {
+    float: left;
+    display: block;
+    margin-bottom: 15px;
+    width: 40%;
+}
+#news ul li:hover a{
+    color: #ff6b00;
+}
+#news ul li a,
+#news ul li span {
+    color: #a7a7a7;
+}
+#news ul li a {
+    display: inline-block;
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#news ul li span {
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+}
+/* 奇数选择器 */
+#news ul li:nth-child(odd) {
+    margin-right: 10%;
+}
+#news ul li span {
+    float: right;
+}
+.more {
+    float: right;
+    color: #a7a7a7;
+}
+.more:hover {
+    color: #ff6b00;
+}
+/*****  news end *****/
+
+/*****  main begin *****/
+.main {
+    padding: 50px 0 30px;
+    background: #ececec;
+}
+
+img {
+    vertical-align: middle;
+}
+.pic {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.pic>span {
+    position: relative;
+    vertical-align: bottom;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.pic .pic-shade {
+    position: absolute;
+    top: 100%;
+    transition: .5s;
+    background: rgba(0,0,0,.5);
+}
+.pic>span:hover .pic-shade{
+    transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+}
+.share {
+    color: #a7a7a7;
+}
+/***** main end *****/
+
+/***** foot begin *****/
+footer {
+    padding: 30px 0;
+    background: #505050;
+    color: #a7a7a7;
+    font-size: .8rem;
+}
+.foot {
+    display: flex;
+    justify-content: space-between;
+}
+.foot ul {
+    /*width: 14%;*/
+    color: #fff;
+}
+.foot ul li {
+    margin-top: 12px;
+}
+.foot ul li a:hover {
+    padding-bottom: 2px;
+    border-bottom: 2px solid #a7a7a7;
+}
+.foot ul li a {
+    color: #a7a7a7;
+    /*transition: .5s;*/
+}
+.contact {
+    position: relative;
+    margin-top: 50px;
+    height: 66px;
+}
+.contact>div:nth-child(1),
+.contact>div:nth-child(2){
+    float: left;
+    margin-right: 20px;
+}
+.contact a {
+    color: #a7a7a7;
+}
+.contact>div p {
+    height: 22px;
+    line-height: 22px;
+}
+.qrcode {
+    position: absolute;
+    right: 165px;
+    bottom: 0;
+}
+.icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.icon>div {
+    display: inline-block;
+}
+.wechat,
+.app,
+.weibo {
+    display: inline-block;
+    border-radius:4px;
+    background: #a7a7a7;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.qr-wechat,
+.qr-app {
+    position: absolute;
+    right: 165px;
+    bottom: 0;
+    display: none;
+}
+.wechat:hover {
+    background: #1cd03e;
+}
+.wechat:hover .qr-wechat {   /* hover 之后要改变样式的元素得是触发hover的子元素*/
+    display: block;
+}
+.app:hover {
+    background: #eba63a;
+}
+.app:hover .qr-app {
+    display: block;
+}
+.weibo:hover {
+    background: #eb3a3a;
+}
